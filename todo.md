@@ -5,8 +5,8 @@
 
 2. a json file with all possible 5 letter words <done>
 
-3. submit button should be disabled if all 5 letters arent selected, or if the word
-   is not a valid 5 letter word, i.e it doesnt match with any word in the json file
+3. submit button should be disabled if all 5 letters arent        selected, or if the word
+   is not a valid 5 letter word, i.e it doesnt match with any word in the json file <done>
 
 4. RANDOM SELECTION OF A WORD FROM THE JSON, THAT HAS TO BE THE WORD TO BE GUESSED
 

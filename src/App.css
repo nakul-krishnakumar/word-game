@@ -1,0 +1,121 @@
+*,
+*::after,
+*::before {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0 auto;
+}
+
+button {
+    outline: none;
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+
+    gap: 2rem;
+}
+
+.head-text {
+    text-align: center;
+    width: 60%;
+    margin: auto;
+    margin-top: -90px;
+}
+
+.head-text h5 {
+    margin-top: -20px;
+}
+
+.playground {   
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+
+    width: fit-content;
+     /* temporary height, remove after adding inner components*/
+    background-color: rgb(109, 109, 109);
+
+    padding: 1rem;
+    border-radius: 10px;
+}
+
+.row {
+    display: flex;
+}
+
+.letter {
+    width: clamp(30px, 8vw, 40px);
+    height: clamp(30px, 8vw, 40px);
+    background-color: #fff;
+
+    margin: 1px;
+    border-radius: 6px;
+
+    color: black;
+    text-align: center;
+    font-size: 2rem;
+    font-weight: 900;
+}
+
+.keyboard {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.alpha-key {
+    width: clamp(30px, 8vw, 40px);
+    height: clamp(30px, 8vw, 40px);
+    background-color: #242424;
+
+    margin: 1px;
+    border-radius: 6px;
+
+    text-align: center;
+
+}
+
+.close-btn {
+    background-color: #fff;
+}
+
+.submit-btn {
+    background-color: #242424;
+    padding: 0.7rem 5rem;
+
+    margin-top: 2rem;
+    border-radius: 25px;
+
+    font-size: 20px;
+}
+
+.submit-btn:disabled {
+    background-color: rgb(109, 109, 109);
+    border: 1px solid white;
+}
+
+@media (min-width: 1000px) {
+    .playground {
+        flex-direction: row;
+    }
+
+    .letter {
+        width: 50px;
+        height: 50px;
+    }
+
+    .alpha-key {
+        width: 50px;
+        height: 50px;
+    }
+}
+

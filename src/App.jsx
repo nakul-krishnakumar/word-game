@@ -1,5 +1,5 @@
 import './App.css'
-import PlayGround from './assets/PlayGround';
+import PlayGround from './components/PlayGround';
 function App() {
   return (
     <div className="App">

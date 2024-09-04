@@ -4,7 +4,9 @@ import { useState } from 'react';
 KeyBoard.propTypes = {
     handleWord: PropTypes.func.isRequired,
     rowCount: PropTypes.func.isRequired,
-    wordSet: PropTypes.array.isRequired
+    wordSet: PropTypes.array.isRequired,
+    randomWord: PropTypes.string.isRequired,
+    setStatus: PropTypes.func.isRequired,
 };
 
 function KeyBoard(props) {
@@ -31,6 +33,8 @@ function KeyBoard(props) {
     const handleClick = (event) => {
         const value = event.currentTarget.getAttribute("data-value");
 
+        console.log(props.randomWord + " Reached KeyBoard");
+
         if (value == "null") { //used to pop the last alphabet
             const newWord = word.slice(0, -1);
             setWord(newWord);
@@ -47,29 +51,35 @@ function KeyBoard(props) {
         }
 
         console.log(word); //testing
-
     }
 
     const handleSumbit = () => {
-            setRow((currRow) => currRow + 1);
-            props.rowCount(row + 1);
-    
-            console.log(word); //testing
-            console.log("type of wordSet send as prop: " + typeof props.wordSet); //testing
-            console.log(wordString); //testing
-    
-    
-            console.log("Submit Button Enabled & Clicked")
-            // for (const word of props.wordSet) { //
-            //     if (wordString === word.toUpperCase()) {
-            //         console.log("YES, IT IS HERE ******************************************"); //testing
-            //     }
-            // }
-    
-            //resetting word and validity as me move to the next row
-            setWord([]);  
-            setValidity(false);
 
+        console.log("Submit Button Enabled & Clicked") //testing
+
+        setRow((currRow) => currRow + 1);
+        props.rowCount(row + 1);
+
+        console.log(word); //testing
+        console.log("type of wordSet send as prop: " + typeof props.wordSet); //testing
+        console.log(wordString); //testing
+        console.log("Current Row At KeyBoard: ", row); //testing
+
+        
+        if (wordString == props.randomWord.toUpperCase()) {
+            console.log("Won! Successfully Predicted: ", props.randomWord);
+            props.setStatus(true);
+        }
+
+        // for (const word of props.wordSet) { //
+        //     if (wordString === word.toUpperCase()) {
+        //         console.log("YES, IT IS HERE ******************************************"); //testing
+        //     }
+        // }
+
+        //resetting word and validity as me move to the next row
+        setWord([]);  
+        setValidity(false);
     }
     
     return (
@@ -106,7 +116,7 @@ function KeyBoard(props) {
                 <button className="alpha-key" onClick={(event) => handleClick(event)} data-value="N">N</button>
                 <button className="alpha-key" onClick={(event) => handleClick(event)} data-value="M">M</button>
                 <button className="alpha-key close-btn" onClick={(event) => handleClick(event)} data-value="null">
-                    <img src="src\images\close-button.png" width="80%" height="auto"/>
+                    <img src="src\assets\images\close-button.png" width="80%" height="auto"/>
                 </button>
 
             </div>

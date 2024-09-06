@@ -41,7 +41,6 @@ function KeyBoard(props) {
 
             props.handleWord(newWord); //callback
 
-
         } else if (value != "null" && word.length < 5) { //add a new alphabet
             const newWord = word;
             newWord.push(value);
@@ -85,37 +84,37 @@ function KeyBoard(props) {
     return (
         <div className="keyboard">
             <div className="row-1 row">
-                <button className="alpha-key" onClick={(event) => handleClick(event)} data-value="Q">Q</button>
-                <button className="alpha-key" onClick={(event) => handleClick(event)} data-value="W">W</button>
-                <button className="alpha-key" onClick={(event) => handleClick(event)} data-value="E">E</button>
-                <button className="alpha-key" onClick={(event) => handleClick(event)} data-value="R">R</button>
-                <button className="alpha-key" onClick={(event) => handleClick(event)} data-value="T">T</button>
-                <button className="alpha-key" onClick={(event) => handleClick(event)} data-value="Y">Y</button>
-                <button className="alpha-key" onClick={(event) => handleClick(event)} data-value="U">U</button>
-                <button className="alpha-key" onClick={(event) => handleClick(event)} data-value="I">I</button>
-                <button className="alpha-key" onClick={(event) => handleClick(event)} data-value="O">O</button>
-                <button className="alpha-key" onClick={(event) => handleClick(event)} data-value="P">P</button>
+                <button tabIndex="0" className="alpha-key" onClick={(event) => handleClick(event)} data-value="Q">Q</button>
+                <button tabIndex="0" className="alpha-key" onClick={(event) => handleClick(event)} data-value="W">W</button>
+                <button tabIndex="0" className="alpha-key" onClick={(event) => handleClick(event)} data-value="E">E</button>
+                <button tabIndex="0" className="alpha-key" onClick={(event) => handleClick(event)} data-value="R">R</button>
+                <button tabIndex="0" className="alpha-key" onClick={(event) => handleClick(event)} data-value="T">T</button>
+                <button tabIndex="0" className="alpha-key" onClick={(event) => handleClick(event)} data-value="Y">Y</button>
+                <button tabIndex="0" className="alpha-key" onClick={(event) => handleClick(event)} data-value="U">U</button>
+                <button tabIndex="0" className="alpha-key" onClick={(event) => handleClick(event)} data-value="I">I</button>
+                <button tabIndex="0" className="alpha-key" onClick={(event) => handleClick(event)} data-value="O">O</button>
+                <button tabIndex="0" className="alpha-key" onClick={(event) => handleClick(event)} data-value="P">P</button>
             </div>
             <div className="row-2 row">
-                <button className="alpha-key" onClick={(event) => handleClick(event)} data-value="A">A</button>
-                <button className="alpha-key" onClick={(event) => handleClick(event)} data-value="S">S</button>
-                <button className="alpha-key" onClick={(event) => handleClick(event)} data-value="D">D</button>
-                <button className="alpha-key" onClick={(event) => handleClick(event)} data-value="F">F</button>
-                <button className="alpha-key" onClick={(event) => handleClick(event)} data-value="G">G</button>
-                <button className="alpha-key" onClick={(event) => handleClick(event)} data-value="H">H</button>
-                <button className="alpha-key" onClick={(event) => handleClick(event)} data-value="J">J</button>
-                <button className="alpha-key" onClick={(event) => handleClick(event)} data-value="K">K</button>
-                <button className="alpha-key" onClick={(event) => handleClick(event)} data-value="L">L</button>
+                <button tabIndex="0" className="alpha-key" onClick={(event) => handleClick(event)} data-value="A">A</button>
+                <button tabIndex="0" className="alpha-key" onClick={(event) => handleClick(event)} data-value="S">S</button>
+                <button tabIndex="0" className="alpha-key" onClick={(event) => handleClick(event)} data-value="D">D</button>
+                <button tabIndex="0" className="alpha-key" onClick={(event) => handleClick(event)} data-value="F">F</button>
+                <button tabIndex="0" className="alpha-key" onClick={(event) => handleClick(event)} data-value="G">G</button>
+                <button tabIndex="0" className="alpha-key" onClick={(event) => handleClick(event)} data-value="H">H</button>
+                <button tabIndex="0" className="alpha-key" onClick={(event) => handleClick(event)} data-value="J">J</button>
+                <button tabIndex="0" className="alpha-key" onClick={(event) => handleClick(event)} data-value="K">K</button>
+                <button tabIndex="0" className="alpha-key" onClick={(event) => handleClick(event)} data-value="L">L</button>
             </div>
             <div className="row-3 row">
-                <button className="alpha-key" onClick={(event) => handleClick(event)} data-value="Z">Z</button>
-                <button className="alpha-key" onClick={(event) => handleClick(event)} data-value="X">X</button>
-                <button className="alpha-key" onClick={(event) => handleClick(event)} data-value="C">C</button>
-                <button className="alpha-key" onClick={(event) => handleClick(event)} data-value="V">V</button>
-                <button className="alpha-key" onClick={(event) => handleClick(event)} data-value="B">B</button>
-                <button className="alpha-key" onClick={(event) => handleClick(event)} data-value="N">N</button>
-                <button className="alpha-key" onClick={(event) => handleClick(event)} data-value="M">M</button>
-                <button className="alpha-key close-btn" onClick={(event) => handleClick(event)} data-value="null">
+                <button tabIndex="0" className="alpha-key" onClick={(event) => handleClick(event)} data-value="Z">Z</button>
+                <button tabIndex="0" className="alpha-key" onClick={(event) => handleClick(event)} data-value="X">X</button>
+                <button tabIndex="0" className="alpha-key" onClick={(event) => handleClick(event)} data-value="C">C</button>
+                <button tabIndex="0" className="alpha-key" onClick={(event) => handleClick(event)} data-value="V">V</button>
+                <button tabIndex="0" className="alpha-key" onClick={(event) => handleClick(event)} data-value="B">B</button>
+                <button tabIndex="0" className="alpha-key" onClick={(event) => handleClick(event)} data-value="N">N</button>
+                <button tabIndex="0" className="alpha-key" onClick={(event) => handleClick(event)} data-value="M">M</button>
+                <button tabIndex="0" className="alpha-key close-btn" onClick={(event) => handleClick(event)} data-value="null">
                     <img src="src\assets\images\close-button.png" width="80%" height="auto"/>
                 </button>
 

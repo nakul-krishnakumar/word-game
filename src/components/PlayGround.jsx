@@ -9,7 +9,7 @@ function PlayGround() {
     const [row, setRow] = useState(0);
     const [won, setWon] = useState(false);
 
-    console.log("Won: ", won)
+    console.log("Won: ", won) //testing
 
     const wordSet = wordDict.words;
     
@@ -21,8 +21,10 @@ function PlayGround() {
         randomWord = wordSet[randIndex];
     }
 
-    console.log(randomWord); //testing
-    //current working: randomWord changes its value once and stays that value
+    console.log("Randomly Selected Word:", randomWord); //testing
+
+    console.log("2D Array Word: ", word); //testing
+    console.log("Last Inputted Word: ", word[row-1]); //testing
 
     const setStatus = (status) => {
         setWon(status);
@@ -32,11 +34,47 @@ function PlayGround() {
         setRow(count);
     }
 
+    const blockColors = () => {
+        let colorMap = new Map();
+        let color = "";
+        if (randomWord != "" && word != undefined && row >= 1 ) {
+            for (let i=0; i<5; i++) {
+
+                console.log("Reached inside For Loop"); //testing
+
+                for (let j=0; j<5; j++) {
+                    if (randomWord[i].toLocaleUpperCase() === word[row-1][j].toLocaleUpperCase()) {
+
+                        if (i != j) {
+                            color = "#FFFF00";
+                        }
+                        else {
+                            color = "#008000";
+                        }
+
+                        console.log("Letter: ", randomWord[i]); //testing
+                        console.log("Index: ", j);
+                        console.log(color);
+                        colorMap.set(j, color);
+ 
+                    }
+                }
+            }
+        }
+        return colorMap;
+    }
+
+    console.log("Block Colors: ", blockColors()); //testing
+
+
     console.log("Current Row At PlayGround: ", row) //testing
 
     if (row >= 6 && !won) {
-        alert("LOSERRRRRRRRRRR :(")
+        alert("LOSERRRRRRRRRRR :(") //testing
     }
+
+    if (won) alert("WINNNNERRRRRR :)"); //testing
+
     const handleWord = (word) => {
         setWord((currWords) => {
             const newWords = [...currWords];
@@ -57,8 +95,8 @@ function PlayGround() {
                     </div>
                 </header>
                 <div className="playground">
-                    <Board  word={word}/>
-                    <KeyBoard handleWord={handleWord} rowCount={rowCount} wordSet={wordSet} randomWord={randomWord} setStatus={setStatus}/>    
+                    <Board  word={word} blockColors={blockColors()} row={row}/>
+                    <KeyBoard handleWord={handleWord} rowCount={rowCount} wordSet={wordSet} randomWord={randomWord} setStatus={setStatus} />    
                 </div>
             </div>
         </>

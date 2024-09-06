@@ -8,16 +8,18 @@
 3. submit button should be disabled if all 5 letters arent selected, or if the word
    is not a valid 5 letter word, i.e it doesnt match with any word in the json file <done>
 
-4. RANDOM SELECTION OF A WORD FROM THE JSON, THAT HAS TO BE THE WORD TO BE GUESSED
-
+4. RANDOM SELECTION OF A WORD FROM THE JSON, THAT HAS TO BE THE WORD TO BE GUESSED <done>
+ 
 5. LETTER POSITION, GREEN AND YELLOW
     GREEN -> crct letter in the crct position, 
     YELLOW -> crct letter, but not in the crct positon
     GREY -> not crct letter
 
-6. LEADERBOARD
+6. RESET BUTTON -> automatically resets after loosing or winning, also reset in between if this button is clicked
 
-7. NEW GAME BUTTON
+7. LEADERBOARD
+
+8. NEW GAME BUTTON
     it should reset all the words to null and set row counter to 0
 
 

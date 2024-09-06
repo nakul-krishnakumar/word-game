@@ -2,11 +2,22 @@ import PropTypes from 'prop-types';
 
 Board.propTypes = {
     word: PropTypes.array.isRequired,
+    blockColors: PropTypes.object.isRequired,
+    row: PropTypes.number.isRequired
 }
 
 function Board(props) {
     console.log(`At Board: ${props.word}`); //testing
 
+    console.log(props.blockColors); //testing
+    console.log("Row At Board: ",props.row); //testing
+
+
+    props.blockColors.forEach((value, key) => {
+        let block = document.getElementsByClassName(`letter-${key+1}`);
+
+        Array.from(block)[props.row - 1].style.background = value; // Set the background color
+    })
     return (
         <div className="board">
             <div className="row-1 row">

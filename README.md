@@ -16,4 +16,4 @@
 </p>
 
 <h3>Website Link:</h3>
-<a href="https://nakul-krishnakumar.github.io/word-game/">https://nakul-krishnakumar.github.io/word-game/<a>
+<a href="https://nakul-krishnakumar.github.io/word-game/" target="_blank">https://nakul-krishnakumar.github.io/word-game/<a>

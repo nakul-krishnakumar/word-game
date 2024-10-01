@@ -115,7 +115,7 @@ function KeyBoard(props) {
                 <button tabIndex="0" className="alpha-key" onClick={(event) => handleClick(event)} data-value="N">N</button>
                 <button tabIndex="0" className="alpha-key" onClick={(event) => handleClick(event)} data-value="M">M</button>
                 <button tabIndex="0" className="alpha-key close-btn" onClick={(event) => handleClick(event)} data-value="null">
-                    <img src="src\assets\images\close-button.png" width="80%" height="auto"/>
+                    <img src="src/assets/images/close-button.png" width="80%" height="auto"/>
                 </button>
 
             </div>
